@@ -1,0 +1,64 @@
+<html>
+<body>
+    <style>
+        body{
+            text-align: center;
+       }
+    </style>
+    <canvas id="mycanva" width="200" height="100" style="border: 1px solid black;">helloworld</canvas>
+    <canvas id="mycanva2" width="200" height="100" >helloworld</canvas>
+    <canvas id="mycanva3" width="200" height="100" style="border: 1px solid rebeccapurple;">helloworld</canvas>
+    <canvas id="mycanva4" width="200" height="100" style="border: 1px solid blueviolet;">helloworld</canvas>
+    <canvas id="mycanva5" width="200" height="100" style="border: 1px solid blueviolet;">helloworld</canvas>
+
+<div class="size">
+
+    <script>
+
+        var c = document.getElementById("mycanva");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,100);
+        ctx.stroke();
+        
+
+        var c = document.getElementById("mycanva2");
+        var ctx = c.getContext("2d");
+        //create gradient
+        var grd = ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"blue");
+        //fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,20,150,80);
+
+
+        var c = document.getElementById("mycanva3");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2 * Math.PI);
+        ctx.stroke();
+        
+
+        
+        var c = document.getElementById("mycanva4");
+        var ctx = c.getContext("2d");
+        ctx.Font = "30px Arial";
+        ctx.fillText("Prem", 10,50);
+        ctx.stroke();
+
+
+
+        var c = document.getElementById("mycanva5");
+        var ctx = c.getContext("2d");
+        ctx.Font = "30px Arial";
+        ctx.strokeText("Hello Prem",10, 50);
+
+               
+        </script>
+
+
+</div>
+
+        </body>
+</html>
